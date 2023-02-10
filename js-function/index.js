@@ -101,3 +101,62 @@ const computeAreas = (width,height) => {
 }
 console.log(computeAreas(5,8));
 
+
+// ! EXERCISE 2: Write a Function Expression
+
+// Write a function named planetHasWater using the function expression syntax.
+
+// It will have one parameter: planet.
+
+// Return true if the planet argument is either "Earth" or "Mars", otherwise return false.
+
+// Bonus points if you ensure the function will work regardless of the casing of the planet being passed in ('earth', 'MARS', etc.).
+
+// Invoke the function a couple of times to test it!
+
+console.log('%c-----function planet----', 'color:yellow')
+
+const planetHasWater = (planet) => {
+    planet = planet.toUpperCase();
+    if (planet === "EARTH" || planet ==="MARS"){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(planetHasWater("mars"));
+
+
+
+
+// ? addList function
+console.log('%c-----function addList----', 'color:yellow')
+
+function addListMore () {
+
+    let sum = 0;
+     
+    for(let i = 0; i < arguments.length; i++){
+        sum += arguments[i];
+    }
+
+    return(sum);
+
+}
+callAddList = addListMore(2,5,8);
+console.log(callAddList);
+
+
+
+//Ways 2
+function addList(...number){
+
+    let sum = 0;
+    number.forEach(item => {
+        sum += item;
+    })
+    return sum;
+    
+}
+getAddList = addList(5,7,9);
+console.log(getAddList);

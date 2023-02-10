@@ -1,63 +1,115 @@
-console.log(`%c --movie.belongs---- `, `color:yellow`);
-// Create a new class
-class Vehicle {
+// create a Cat class
+class Cat{
 
-    constructor(vin, make, model, year) {
-        this.vin = vin;
-        this.make = make;
-        this.model = model
-        this.running = false;
-        this.year = year;
+    eyes = 2;
+    tail = 1;
+    leg = 4;
+    high = 50;
+    emotion = "cute";
+
+    constructor(catName, sound, color){
+        this.catName = catName;
+        this.sound = sound;
+        this.color = color;
     }
 
-    // instance method: will start the vehicle
-    start() {
-        this.running = true;
-        console.log("Vehicle running....");
+
+    call(){
+        console.log(`${this.catName} call ${this.sound}`);
     }
 
-    toString() {
-        return `Vehicle ${this.vin} is a ${this.make}, model ${this.model}.`
+    jumping(height){
+        this.high += height;
+        console.log(`${this.catName} can jump ${this.high} meter`);
     }
 
-    // static method
-    static vehicleInfo() {
-        console.log("Vehicle class...");
+    emotional(){
+        console.log(`${this.catName} will suppose to be ${this.cute} every time it's make trouble`)
+    }
+
+
+}
+
+//create an instance of the cat class
+const Lucci = new Cat("Lucci","MEO","brown");
+const Lessi = new Cat("Lessi", "M...E...O", "yellow");
+
+console.log(`%c -- call()---` , `color:yellow`);
+Lucci.call();
+Lessi.call();
+
+console.log(`%c -- jumping()---` , `color:yellow`);
+Lucci.jumping(10);
+Lessi.jumping(20);
+
+console.log(`%c -- emotional()---` , `color:yellow`);
+Lucci.emotional();
+Lessi.emotional();
+
+console.log(`%c -- Lucci---` , `color:yellow`);
+console.log(Lucci);
+
+console.log(`%c -- Lessi---` , `color:yellow`);
+console.log(Lessi);
+
+
+
+
+//create a Pirate class
+class Pirate{
+
+    assets = 10000;
+
+    constructor(name, hairColor, weapon){
+        this.name = name;
+        this.hair = hairColor;
+        this.weapon = weapon;
+
+    }
+
+    //Set name and weapon for each pirate
+    getWeapon(){
+        console.log(`${this.name} have weapon is ${this.weapon}`)
+    }
+
+    capture(reward){
+        this.assets += reward;
+        console.log(`${this.name} capture has ${this.assets}`);
+    }
+
+    attack(ship1, ship2 = "Nightmare"){
+       console.log(`${this.name} will attack ${ship1} ship and ${ship2} ship`);
     }
 
 }
 
-//* create an instance of the Vehicle class
-const car1 = new Vehicle("7rh47rh", "Honda", "civic", 1995);
+//create new instance
+const pirate1 = new Pirate("pirate 1", "brown", "Sword");
+const pirate2 = new Pirate("pirate 2", "black", "Gauntlet");
+const pirate3 = new Pirate("pirate 3", "red","knife");
 
-const car2 = new Vehicle("72gry2g", "BMW", "m3", 2022);
+console.log(`%c -- capture()---` , `color:red`);
+pirate1.capture(200);
+pirate2.capture(50);
+pirate3.capture(120);
 
-console.log(car1);
-console.log(car2);
+console.log(`%c -- attack()---` , `color:yellow`);
+pirate1.attack("Pirate", "Rumble");
+pirate2.attack("Anabia", "Pirate");
+pirate3.attack("Mango");
 
-//* calling an instance method of Vehicle
-car1.start()
+//create pirateship array with two intance 
+const pirateShip = [pirate1, pirate2,pirate3];
+const pirateShip2 = [pirate1, pirate2,pirate3];
 
-//* calling a static method of Vehicle
-Vehicle.vehicleInfo()
+console.log(`%c -- forEach pirateShip---` , `color:yellow`);
+pirateShip.forEach(item => 
+    console.log(item));
 
-console.log(car1.toString())
+console.log(`%c -- list pirateShip---` , `color:yellow`);
 
-//* Create a subclass or extend a parent class
-class Electric extends Vehicle {
-    battery = 300
-}
+console.log(pirateShip);
 
-const car3  = new Electric();
-console.log(car3);
+console.log(`%c -- list pirateShip2---` , `color:yellow`);
 
-
-
-
-// instance method
-const color = []
-// color.forEach()
-
-// static method
-Math.random();
-
+console.log(pirateShip2);
