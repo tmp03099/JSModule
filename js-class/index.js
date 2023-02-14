@@ -1,16 +1,15 @@
 // create a Cat class
 class Cat{
 
-    eyes = 2;
+    eyesColor = "blue";
     tail = 1;
-    leg = 4;
     high = 50;
-    emotion = "cute";
+    emotion = "CUTE";
+    sound = "M...E...O"
+    color = "yellow";
 
-    constructor(catName, sound, color){
+    constructor(catName){
         this.catName = catName;
-        this.sound = sound;
-        this.color = color;
     }
 
 
@@ -24,15 +23,15 @@ class Cat{
     }
 
     emotional(){
-        console.log(`${this.catName} will suppose to be ${this.cute} every time it's make trouble`)
+        console.log(`${this.catName} will show ${this.emotion} face every time it's make trouble`)
     }
 
 
 }
 
 //create an instance of the cat class
-const Lucci = new Cat("Lucci","MEO","brown");
-const Lessi = new Cat("Lessi", "M...E...O", "yellow");
+const Lucci = new Cat("Lucci");
+const Lessi = new Cat("Lessi");
 
 console.log(`%c -- call()---` , `color:yellow`);
 Lucci.call();
@@ -64,10 +63,10 @@ class Pirate{
         this.name = name;
         this.hair = hairColor;
         this.weapon = weapon;
-
     }
 
     //Set name and weapon for each pirate
+    //create method
     getWeapon(){
         console.log(`${this.name} have weapon is ${this.weapon}`)
     }
@@ -84,9 +83,12 @@ class Pirate{
 }
 
 //create new instance
-const pirate1 = new Pirate("pirate 1", "brown", "Sword");
-const pirate2 = new Pirate("pirate 2", "black", "Gauntlet");
-const pirate3 = new Pirate("pirate 3", "red","knife");
+const pirate1 = new Pirate("Pirate 1", "Brown", "Sword");
+const pirate2 = new Pirate("Pirate 2", "Black", "Gauntlet");
+const pirate3 = new Pirate("Pirate 3", "Red","Club");
+const pirate4 = new Pirate("Pirate 4", "Blue", "Spear");
+const pirate5 = new Pirate("Pirate 5", "Yellow", "Crossbow");
+const pirate6 = new Pirate("Pirate 6", "Black","Halberd");
 
 console.log(`%c -- capture()---` , `color:red`);
 pirate1.capture(200);
@@ -98,18 +100,16 @@ pirate1.attack("Pirate", "Rumble");
 pirate2.attack("Anabia", "Pirate");
 pirate3.attack("Mango");
 
-//create pirateship array with two intance 
-const pirateShip = [pirate1, pirate2,pirate3];
-const pirateShip2 = [pirate1, pirate2,pirate3];
+//create pirate ship array with 3 pirates intance 
+const jollyRoger = [pirate1, pirate2,pirate3];
+const blackPearl = [pirate4, pirate5,pirate6];
 
-console.log(`%c -- forEach pirateShip---` , `color:yellow`);
-pirateShip.forEach(item => 
-    console.log(item));
+console.log(`%c -- forEach jollyRoger ship---` , `color:yellow`);
+jollyRoger.forEach(items =>{
+    console.log(`Pirate Name: ${items.name} - Weapon: ${items.weapon} - Hair color: ${items.hair}`);
+});
 
-console.log(`%c -- list pirateShip---` , `color:yellow`);
-
-console.log(pirateShip);
-
-console.log(`%c -- list pirateShip2---` , `color:yellow`);
-
-console.log(pirateShip2);
+console.log(`%c -- forEach blackPearl ship---` , `color:yellow`);
+blackPearl.forEach(item =>{
+    console.log(`Pirate Name: ${item.name} - Weapon: ${item.weapon} - Hair color: ${item.hair}`);
+});

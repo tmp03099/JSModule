@@ -109,11 +109,12 @@ hat: "ballcap",
 shirt: "jersey",
 shoes: "cleats"
 };
-//* Assign each variable its corresponding value from the object
+// ? Assign each variable its corresponding value from the object
 // ! MEANING: CREATE NEW VARIABLE TO HOLD THE VALUE OF A PROPERTY FROM THE OBJECT
 //Only change code below this line
 console.log(`%c --ex2---- `, `color:yellow`);
 
+//assign the variable
 const hat = testObj.hat;
 
 const shirt = testObj.shirt ;
@@ -140,8 +141,9 @@ const testObj2 = {
 // Only change code below this line
 console.log(`%c --ex3---- `, `color:yellow`);
 
+//assign the variable
 const entreeValue = testObj2["an entree"]
-const drinkValue = testObj2["my side"] 
+const drinkValue = testObj2["the drink"] 
 console.log(entreeValue);
 console.log(drinkValue);
 
@@ -159,11 +161,13 @@ const testObj3 = {
 
 // Only change code below this line
 console.log(`%c --ex4---- `, `color:yellow`);
+
+//set playerNumber hold key
 const playerNumber = 16; // Change this line
+
+//get the value of key (get name) in obj
 const player2 = testObj3[playerNumber]; // Change this line
-// for(prop in testObj3){
-//     console.log(prop);
-// }
+
 console.log(player2);
 
 
@@ -220,6 +224,8 @@ bark: "woof"
 console.log(`%c --ex7---- `, `color:yellow`);
 delete myDog4.tails
 console.log(myDog4);
+
+
 //* ===============Exercise 8: ===========================
 // Add a new album to the myMusic array.
 // Add artist and title strings, release_year number, 
@@ -247,6 +253,8 @@ const newAlbum = {
 myMusic[1] = newAlbum;
 
 console.log(myMusic);
+
+
 //* ===============Exercise 9: ===========================
 // Access the myStorage object and assign the contents of 
 // the glove box property to the gloveBoxContents variable. 
@@ -269,6 +277,8 @@ car: {
 console.log(`%c --ex9---- `, `color:yellow`);
 const gloveBoxContents = myStorage.car.inside["glove box"]
 console.log(gloveBoxContents);
+
+
 //* ===============Exercise 10: FINAL BOSS ===========================
 // Using dot and bracket notation, set the variable secondTree
 // to the second item in the trees list from the myPlants object.

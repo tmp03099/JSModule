@@ -39,7 +39,7 @@ function isCharAVowel(character){
     }
   })
   
-  if (isTrueAVowel == true){
+  if (isTrueAVowel === true){
     return true;
   }else{
     return false;
@@ -75,15 +75,18 @@ function multiplyArray (arr){
   return multiply;
 
 }
+
 let getMultiply = multiplyArray([2,4,5]);
 console.log(`%c-- multiplyArray ---`,`color:yellow;`);
 console.log(`Multiple of Array is: ${getMultiply}`);
 
 
 // 6. function expression numArgs
-const numArgs = function(...arguments){
-    return arguments.length;
+const numArgs = function(...skills){
+    return skills.length;
 }
+
+
 let getNumArgs = numArgs(2,3,5,6,7,8,34,5,6,7);
 console.log(`%c-- numArgs ---`,`color:yellow;`);
 console.log(`Number of array is: ${getNumArgs}`);
@@ -136,10 +139,8 @@ function stringsLonger(arr,numb){
       getString.push(item);    
        
     }
-  })
-  console.log(getString);
-  
-
+  });
+  return getString;
 }
 console.log(`%c-- stringsLonger---`,`color:yellow;`);
-let getStringsLonger = stringsLonger(["Hi","How are you","Goodluck","Say"], 3);
+console.log(stringsLonger(["Hi","How are you","Goodluck","Say"], 3));

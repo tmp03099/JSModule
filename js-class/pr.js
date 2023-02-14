@@ -147,6 +147,7 @@ console.log(mario instanceof Player);
 class Friend extends Player{
 
     constructor(name, age, hair, ...skills){
+       // * Used super keyword to access parent class
         super(name, age, hair);
         this.skills = skills;
     }
@@ -161,6 +162,8 @@ class Friend extends Player{
     }
 
     doubleAttack(){
+        // * Used super keyword to access the attack() parent class
+        // * b/c the attack() over writting in Friend child class
         super.attack();
         this.attack();
     }
