@@ -125,14 +125,18 @@ class Chef extends Person{
 
             }
         });
-        return (`${this.name} is creativity Chef`);
+        return (`${this.name} is creativity Chef`);//! incorrect
 
     }
     
 }
 
 const Riana = new PostalWorker("Riana", "05/08/1985", "Postal");
+const Ryan = new PostalWorker("Ryan", "02/09/1864", "HR");
 console.log(Riana.position());
+console.log(Ryan.position());
 
-const Mina = new Chef ("Mina", "12/01/1878", "Chef", null, ["Knife", "Creativity", "Organization", "Cleanliness"] );
+const Mina = new Chef ("Mina", "12/01/1878", "Chef", 2, ["Knife", "Creativity", "Organization", "Cleanliness"] );
+const Bob = new Chef ("Bob", "12/01/1878", "Software Engineer", null, ["REACT", "HTML", "CSS", "JS"] );
 console.log(Mina.skillSet());
+console.log(Bob.skillSet());
