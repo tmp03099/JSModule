@@ -72,7 +72,56 @@ for (item of arr){
 ////////////////////////////////
 //* Methods, Revisited
 ////////////////////////////////
+console.log(`%c ---Methods, Revisited---`,`color:yellow;`);
 
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+for(let i = 0; i < favMovies.length ; i++){
+    
+    //favMovies[i] access the array for value of index i
+    if (favMovies[i]  === "Titanic"){
+        console.log(`index of Titanic is: ${i}`);
+    }
+}
+
+favMovies.sort(); //sorts an array alphabet //didb't permanently
+
+favMovies.pop();
+
+favMovies.push("Guardians of the Galaxy");
+
+favMovies.reverse(); //reverse the array
+
+favMovies.shift(); //removes the first array element
+
+favMovies.unshift(); //add the first element to array
+
+// splice"Django Unchained" and add "Avatar"
+for(let i = 0; i < favMovies.length ; i++){
+    
+    //favMovies[i] access the array for value of index i
+    if (favMovies[i]  === "Django Unchained"){
+        favMovies.splice(i, 1, "Avatar");
+    }
+}
+
+// slice the last half of the array
+let halfLength = favMovies.length / 2;
+let sliceHalfArr = favMovies.slice(halfLength);
+console.log(sliceHalfArr); 
+
+console.log(`%c ---Final result---`,`color:yellow;`)
+console.log(favMovies);
+
+// console.log the index of "Fast and Furious" -We removed it from the array
+for(let i = 0; i < favMovies.length ; i++){
+    
+    //favMovies[i] access the array for value of index i
+    if (favMovies[i]  === "Fast and Furious"){
+        delete favMovies[i];
+    }
+}
+console.log(favMovies);
 
 ////////////////////////////////
 //* Where is Waldo

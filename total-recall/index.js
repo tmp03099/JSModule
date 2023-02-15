@@ -403,6 +403,7 @@ console.log(`%c --- IV. Functions---`, `color:red;`);
     console.log(maxOfThree(6, 9, 1));
 // H.
     // Write a function printLongestWord that accepts a single argument, an array of strings
+    //can use for loop as arg[i].length
     console.log(`%c --- printLongestWord---`, `color:yellow;`);
     function printLongestWord(arg){
 
