@@ -57,11 +57,17 @@ dart.push("Hawkins");
 // Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfyarray and replace it with "Gameboy".
 wolfy[0] = "Gameboy";
 
-console.log(wolfy);
 ////////////////////////////////
 //* Yell at the Ninja Turtles
 ////////////////////////////////
+console.log(`%c ---Yell at the Ninja Turtles---`,`color:yellow;`);
 
+const arr = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+
+for (item of arr){
+    item = item.toUpperCase();
+    console.log(item);
+}
 
 ////////////////////////////////
 //* Methods, Revisited
