@@ -133,7 +133,7 @@ function stringsLonger(arr,numb){
 
   let getString = [];
   arr.forEach(item => {
-
+  
     //check the length of string and the number;
     if (item.length > numb ){
       getString.push(item);    

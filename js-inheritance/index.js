@@ -122,10 +122,10 @@ class Chef extends Person{
             if(items.toLowerCase() === "creativity"){
                 //set true if match condition
                 iscreative = true;
-
+                console.log(`${this.name} is a creativity Chef`);
             }
         });
-        return (`${this.name} is creativity Chef`);//! incorrect
+        return iscreative;
 
     }
     
@@ -138,5 +138,5 @@ console.log(Ryan.position());
 
 const Mina = new Chef ("Mina", "12/01/1878", "Chef", 2, ["Knife", "Creativity", "Organization", "Cleanliness"] );
 const Bob = new Chef ("Bob", "12/01/1878", "Software Engineer", null, ["REACT", "HTML", "CSS", "JS"] );
-console.log(Mina.skillSet());
-console.log(Bob.skillSet());
+Mina.skillSet();
+Bob.skillSet();
