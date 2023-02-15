@@ -178,7 +178,6 @@ console.log(median);
 
 
 //Hungry for More
-
 const kristynsCloset = [
     "left shoe",
     "cowboy boots",
@@ -212,15 +211,18 @@ const kristynsCloset = [
 
 //   Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. 
 //   Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+let kristynsShoe = kristynsCloset.splice(0,1); //? return array
+thomsCloset[2].push(kristynsShoe[0]); //? push element so should kristynShoe[0]
 
+console.log("kristynsCloset",thomsCloset);
 // Modify your code to put together 3 separate outfits for Kristyn and Thom.
 kristynsCloset.push("green Rayban glasses");
 kristynsCloset.push("Nike shoe ");
 kristynsCloset.push("Red dress");
 
-thomsCloset.push("blue C glasses");
-thomsCloset.push("jean jacket");
-thomsCloset.push("C hat");
+thomsCloset[2].push("blue C glasses");
+thomsCloset[0].push("jean jacket");
+thomsCloset[2].push("C hat");
 
 // loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
 for (items of kristynsCloset){
@@ -229,4 +231,6 @@ for (items of kristynsCloset){
 
 // Using bracket notation, log the arrays containing all of Thom's shirts, pants, and accessories.
 console.log(`%c ---log Thom's arrays---`,`color:yellow;`)
-console.log([thomsCloset]);
+console.log(thomsCloset[0]);
+console.log(thomsCloset[1]);
+console.log(thomsCloset[2]);
