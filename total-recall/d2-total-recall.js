@@ -122,6 +122,7 @@ for(let i = 0; i < favMovies.length ; i++){
     }
 }
 
+// console.log(favMovies);
 ////////////////////////////////
 //* Where is Waldo
 ////////////////////////////////
@@ -135,14 +136,33 @@ const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 whereIsWaldo.splice(1,1);
 
 // Change "Neff" to "No One"
+// console.log(whereIsWaldo);
 whereIsWaldo[1][2] = "No One";
 
 // Access and console.log "Waldo"
 console.log(whereIsWaldo[2][1][1]);
 
+
 ////////////////////////////////
 //*  Excited Kitten
 ////////////////////////////////
+console.log(`%c ---Excited Kitten---`,`color:yellow;`)
+
+const evenArray = ["...human...why you taking pictures of me?...", "...the catnip made me do it...","...why does the red dot always get away..."]
+
+for (let i = 1; i <=20 ; i++){
+    if (i % 2 === 0){
+        const randomNumber = (Math.floor(Math.random()*3));
+        console.log(evenArray[randomNumber]);
+
+    }else{
+        console.log("Love me, pet me! HSSSSSS!");
+    }
+}
+
+
+
+
 
 
 ////////////////////////////////
