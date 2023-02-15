@@ -122,11 +122,23 @@ for(let i = 0; i < favMovies.length ; i++){
     }
 }
 
-console.log(favMovies);
-
 ////////////////////////////////
 //* Where is Waldo
 ////////////////////////////////
+console.log(`%c ---Where is Waldo---`,`color:yellow;`)
+
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+
+//remove Eggbert
+whereIsWaldo.splice(1,1);
+
+// Change "Neff" to "No One"
+whereIsWaldo[1][2] = "No One";
+
+// Access and console.log "Waldo"
+console.log(whereIsWaldo[2][1][1]);
 
 ////////////////////////////////
 //*  Excited Kitten
