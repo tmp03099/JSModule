@@ -118,15 +118,15 @@ for(let i = 0; i < favMovies.length ; i++){
     
     //favMovies[i] access the array for value of index i
     if (favMovies[i]  === "Fast and Furious"){
-        delete favMovies[i];
+        favMovies.splice(i,1);
     }
 }
+
 console.log(favMovies);
 
 ////////////////////////////////
 //* Where is Waldo
 ////////////////////////////////
-
 
 ////////////////////////////////
 //*  Excited Kitten
