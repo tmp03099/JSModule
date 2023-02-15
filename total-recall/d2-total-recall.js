@@ -94,7 +94,7 @@ favMovies.reverse(); //reverse the array
 
 favMovies.shift(); //removes the first array element
 
-favMovies.unshift(); //add the first element to array
+favMovies.unshift("Up"); //add the first element to array
 
 // splice"Django Unchained" and add "Avatar"
 for(let i = 0; i < favMovies.length ; i++){
@@ -106,7 +106,7 @@ for(let i = 0; i < favMovies.length ; i++){
 }
 
 // slice the last half of the array
-let halfLength = favMovies.length / 2;
+let halfLength = Math.ceil(favMovies.length / 2);
 let sliceHalfArr = favMovies.slice(halfLength);
 console.log(sliceHalfArr); 
 
@@ -160,11 +160,10 @@ for (let i = 1; i <=20 ; i++){
     }
 }
 
-
-
-
-
-
 ////////////////////////////////
 //*  Find the Median
 ////////////////////////////////
+console.log(`%c ---Find the Median---`,`color:yellow;`)
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
