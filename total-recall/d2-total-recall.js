@@ -9,7 +9,10 @@ for(let i = 1; i <= 20 ; i++ ){
 ////////////////////////////////
 //* Get Even
 ////////////////////////////////
-
+console.log(`Write a for loop that will log only the even numbers in 0 through 200`,`color:yellow;`);
+for(let i = 0; i<=200; i+=2){
+    console.log (i);
+}
 
 ////////////////////////////////
 //* Fizz Buzz
