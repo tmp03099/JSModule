@@ -136,7 +136,7 @@ const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 whereIsWaldo.splice(1,1);
 
 // Change "Neff" to "No One"
-// console.log(whereIsWaldo);
+console.log(whereIsWaldo);
 whereIsWaldo[1][2] = "No One";
 
 // Access and console.log "Waldo"
@@ -167,3 +167,66 @@ console.log(`%c ---Find the Median---`,`color:yellow;`)
 
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
+//odd number
+nums.sort(); // sort the number
+
+const midNums = Math.floor(nums.length/2);
+
+median = nums[midNums];
+
+console.log(median);
+
+
+//Hungry for More
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "Per Scholas hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+//   Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. 
+//   Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+// Modify your code to put together 3 separate outfits for Kristyn and Thom.
+kristynsCloset.push("green Rayban glasses");
+kristynsCloset.push("Nike shoe ");
+kristynsCloset.push("Red dress");
+
+thomsCloset.push("blue C glasses");
+thomsCloset.push("jean jacket");
+thomsCloset.push("C hat");
+
+// loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
+for (items of kristynsCloset){
+    console.log(`WHIRR: Now washing ${items}`);
+}
+
+// Using bracket notation, log the arrays containing all of Thom's shirts, pants, and accessories.
+console.log(`%c ---log Thom's arrays---`,`color:yellow;`)
+console.log([thomsCloset]);

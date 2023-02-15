@@ -416,12 +416,28 @@ console.log(`%c --- IV. Functions---`, `color:red;`);
                 longestLength = items.length;
                 longestString = items;
             }
-
         });
         return longestString;
-
     }
     console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
+
+    // * Way 2 
+    // function printLongestWord(arg){
+
+    //     let longestString = "";
+
+    //     arg.forEach(items =>{
+
+    //         if (longestString.length < items.length){
+    //             longestString = items;
+    //         }
+    //     });
+    //     return longestString;
+    // }
+    // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
+    
 //_____________________________________________________________
 
 
