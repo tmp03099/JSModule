@@ -153,7 +153,7 @@ const secondDinner = newDish.setDinner("Seared Ahi Tuna", "Filer Mignon", "Chees
 const thirdDinner = newDish.setDinner("Meat Ball", "Smothered Chicken", "Flan");
 
 // console.log(firstDinner);
-console.log(newDish);
+console.log(newDish.menu);
 
 
 
