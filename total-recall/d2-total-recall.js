@@ -163,16 +163,17 @@ for (let i = 1; i <=20 ; i++){
 ////////////////////////////////
 //*  Find the Median
 ////////////////////////////////
+//median is find the medium number of length array
 console.log(`%c ---Find the Median---`,`color:yellow;`)
 
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
-//odd number
-nums.sort(); // sort the number
+//odd length
+nums.sort(); // 
 
 const midNums = Math.floor(nums.length/2);
 
-median = nums[midNums];
+let median = nums[midNums];
 
 console.log(median);
 

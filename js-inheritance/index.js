@@ -53,11 +53,10 @@ class Person{
     canDrink(){
 
         if (this.age() >= 21){
-            console.log(`${this.name} can drink`);
-            return true;
+            return (`${this.name} can drink`);
         }else{
-            console.log(`${this.name} can't drink due only ${this.age()} years old`);
-            return false;
+            return (`${this.name} can't drink due only ${this.age()} years old`);
+            
         }
     }
 }
@@ -67,24 +66,17 @@ class Person{
 //PostalWorker inherit Person class
 class PostalWorker extends Person{
 
-    //create constructor for PostalWorker child use super keyword
-    constructor(name, dob, job){
-        super(name, dob, job);
-    }
-
     citizen(state){
         return (`${this.name} is citizen of ${state}`);
     }
 
-    // ? over writing the position method from parent class
+    // ? overriding the position method from parent class
     position(){
         if (this.job.toLowerCase() === "postal"){
-            console.log(`${this.name} work in Postal Industry`);
-            return true;
+            return(`${this.name} work in Postal Industry`);
         }else{
             //call parent method
-            console.log(super.position());
-            return false;
+            return(super.position());
         }
     }
 
@@ -104,7 +96,7 @@ class Chef extends Person{
     checkRestaurant(){
         
         if (this.restaurant === null || this.restaurant === undefined || this.restaurant === ""){
-            console.log(`${this.name} is chef `);
+            console.log(`${this.name} is ${this.job} `);
         } else{
             console.log(`${this.name} is chef and have ${this.restaurant} restaurant`);
         }
@@ -122,21 +114,49 @@ class Chef extends Person{
             if(items.toLowerCase() === "creativity"){
                 //set true if match condition
                 iscreative = true;
-                console.log(`${this.name} is a creativity Chef`);
             }
         });
-        return iscreative;
 
+        if(iscreative){
+            console.log(`${this.name} is a creativity Chef`);
+        }else{
+            console.log(`${this.name} is ${this.job} `);
+        }
+        return iscreative;
+        
     }
     
 }
 
-const Riana = new PostalWorker("Riana", "05/08/1985", "Postal");
-const Ryan = new PostalWorker("Ryan", "02/09/1864", "HR");
-console.log(Riana.position());
-console.log(Ryan.position());
+//PostalWorker
+const riana = new PostalWorker("riana", "05/08/1985", "Postal");
+const ryan = new PostalWorker("ryan", "02/09/2001", "HR");
 
-const Mina = new Chef ("Mina", "12/01/1878", "Chef", 2, ["Knife", "Creativity", "Organization", "Cleanliness"] );
-const Bob = new Chef ("Bob", "12/01/1878", "Software Engineer", null, ["REACT", "HTML", "CSS", "JS"] );
-Mina.skillSet();
-Bob.skillSet();
+console.log(`%c --Check citizen---` , `color:yellow;`);
+console.log(riana.citizen("PA"));
+console.log(ryan.citizen("CA"));
+
+console.log(`%c --position---` , `color:yellow;`);
+console.log(riana.position());
+console.log(ryan.position());
+
+//Chef
+
+const mina = new Chef ("mina", "12/01/1987", "Chef", 2, ["Knife", "Creativity", "Organization", "Cleanliness"] );
+const bob = new Chef ("bob", "12/01/1978", "Software Engineer", null, ["REACT", "HTML", "CSS", "JS"] );
+
+console.log(`%c --Check Restaurant---` , `color:yellow;`);
+mina.checkRestaurant();
+bob.checkRestaurant();
+
+console.log(`%c --Skills Check Creative---` , `color:yellow;`);
+mina.skillSet();
+bob.skillSet();
+
+console.log(`%c --check age---` , `color:yellow;`);
+console.log(bob.age());
+console.log(riana.age());
+
+console.log(`%c --check can Drink---` , `color:yellow;`);
+console.log(mina.canDrink());
+console.log(ryan.canDrink());
