@@ -131,18 +131,15 @@ class Dinner{
 
 //Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
 class Chef{
-
-    constructor(){
-        this.menu = [];
-    }
-
+    
+    menu = [];
+    
     setDinner(appetizer, entree, dessert){
 
         //returns a new Dinner based on those arguments.
         //* create an instance of dinner class
         const dinner = new Dinner(appetizer, entree, dessert);
         this.menu.push(dinner);
-        return dinner;
     }
  
 }
