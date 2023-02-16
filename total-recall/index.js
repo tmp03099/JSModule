@@ -23,7 +23,7 @@
     5. What is pseudocoding and why should you do it? 
         A.  Pseudocoding mean fake code. It is step-by-step description of an algorithm uses the simple English language text as it is intended for uncoding people easy understand. It is very detail and great template for programmer writting code. 
     6. What percentage of time should be spent thinking about how you're going to solve a problem vs actually typing in code to solve it? 
-        A. 50%
+        A. 60%
 */
 
 // B. Strings
@@ -61,11 +61,11 @@ console.log(`%c --- Booleans ----`, `color:yellow;`);
   console.log('Name' === 'Name');
   // FOR THE NEXT TWO, USE ONLY && OR ||
   console.log(true || false);
-  console.log(false && false && false || false && false || true);
+  console.log(false && false || false || false ||false || true);
   console.log(false === false)
   console.log(e === 'Kevin');
   console.log(a != b != c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
-  console.log(a == a != d); // note: the answer is a simple arithmetic equation, not something "weird"
+  console.log(a * a === d); // note: the answer is a simple arithmetic equation, not something "weird"
   console.log(48 == '48');
 
 // D. The Farm

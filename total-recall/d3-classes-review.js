@@ -74,11 +74,15 @@ const timmy = new Person("Timmy");
 // Age Timmy five years
 for(let i = 0; i<5 ; i++){
     timmy.ageUp();
+}
 
-    //Have him eat five times.
+//Have him eat five times.
+for(let i = 0; i<5 ; i++){
     timmy.eat();
-
-    //Have him exercise five times
+}
+   
+//Have him exercise five times
+for(let i = 0; i<5 ; i++){
     timmy.exercise();
 }
 
@@ -115,14 +119,65 @@ console.log(timmy);
 
 class Dinner{
 
+    // Add a constructor to dinner
+    // sets the string properties, appetizer, entree and dessert
     constructor(appetizer, entree, dessert){
         this.appetizer = appetizer;
         this.entree = entree;
         this.dessert = dessert;
     }
+
 }
 
+//Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
 class Chef{
 
-    
+    constructor(){
+        this.menu = [];
+    }
+
+    setDinner(appetizer, entree, dessert){
+
+        //returns a new Dinner based on those arguments.
+        //* create an instance of dinner class
+        const dinner = new Dinner(appetizer, entree, dessert);
+        this.menu.push(dinner);
+        return dinner;
+    }
+ 
 }
+
+const newDish = new Chef();
+
+const firstDinner =  newDish.setDinner("Corn Bread", "Grilled Salmon Teriyakki", "Custard Ice Cream");
+
+const secondDinner = newDish.setDinner("Seared Ahi Tuna", "Filer Mignon", "Cheese Cake");
+
+const thirdDinner = newDish.setDinner("Meat Ball", "Smothered Chicken", "Flan");
+
+// console.log(firstDinner);
+console.log(newDish);
+
+
+
+// A. Q + A
+/*
+1. How do we assign a value to a variable? let somevar = 10
+    A. Using key word let and name variable to set your value with the assignment operator
+
+2. How do we change the value of a variable? somevar = 12
+    A. Select the variable and change to new value
+
+3. How do we assign an existing variable to a new variable? let newvar = somevar
+    A. Assign a new variable and assign the existing variable to new variable. 
+
+4. Remind me, what are declare, assign, and define? no wrong answers, they should show an understanding of how to use these words
+    A. Declare is create a new variable
+    b. Assign is set a new value to a variable
+    c. Define is decide a function
+
+5. What is pseudocoding and why should you do it? no wrong answers but they should understand that psuedo code is not code its plain english description of what they want to accomplish
+
+6.What percentage of time should be spent thinking about how you're going to solve a problem vs actually typing in code to solve it? no wrong answers but they should defend what they say
+*/
+
