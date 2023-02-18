@@ -37,8 +37,8 @@ let walker = myLinkedList.getHeadNode();
 //swapping to 4-> 12 ->7 ->null
 let temp = walker.next.next; //Node 12
 
-walker.next.next = temp.next; //temp.next is 7 : set 7 -> null
-temp.next = walker.next // 12->7
+walker.next.next = temp.next; // set 7 -> null => 4->7->null
+temp.next = walker.next // 12->7 => 12->7->null
 
 walker.next = temp // 4->12
 
