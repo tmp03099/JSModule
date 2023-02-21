@@ -25,7 +25,7 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 topMenuEl.classList.add('flex-around');
 
 
-// ? Task 2
+// ? Task 3
 // Menu data structure
 var menuLinks = [
     {text: 'about', href: '/about'},
@@ -34,11 +34,23 @@ var menuLinks = [
     {text: 'account', href: '/account'},
 ];
 
-menuLinks.forEach((element, idx) =>{
-    element.innerHTML = "<a></a>"; //create an <a> element
-    element.innerHTML = ""
 
+menuLinks.forEach((element) =>{
 
+    //create an <a> element
+    const a  = document.createElement('a') 
+    
+    // add an href attribute with its value set to the href property
+    a.setAttribute('href', element.href);
+    console.log(a);
+
+    // Set the new element's content to the value of the text property
+    a.textContent = element.text
+
+    //Append the new element to the topMenuElelement.
+    topMenuEl.appendChild(a);
+    // console.log(topMenuEl)
+    
 });
 
-console.dir(menuLinks)
+console.log(menuLinks)
