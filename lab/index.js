@@ -221,8 +221,100 @@ for (let i = 0; i<arr.length ; i ++){
 
 
 
-// ADD CODE HERE
-for (let i = 10; i > 0 ; i--){
-  countDown--
+// // ADD CODE HERE
+// let countDown = 10;
+// for (let i = 10; i > 0 ; i--){
+//   countDown--;
+// }
+// console.log(countDown);
+
+
+let friendsAvailable = true;
+
+function makePlans(name) {
+  // INSERT CODE HERE
+  return callFriend(friendsAvailable, name);
 }
-console.log(countDown);
+
+function callFriend(bool, name) {
+  // INSERT CODE HERE
+  if (bool){
+    return (`Plans made with ${name} this weekend`);
+  } else{
+    return(`Everyone is busy this weekend`)
+  }
+}
+
+// Uncomment these to check your work!
+console.log(makePlans("Mary")) // should return: "Plans made with Mary this weekend'
+friendsAvailable = false;
+console.log(makePlans("James")) //should return: "Everyone is busy this weekend."
+
+
+
+function addN(arr, n){
+  // ADD CODE HERE
+  let newNum = 0;
+  let arr2=[];
+  
+  for (let i = 0; i<arr.length ; i++){
+    newNum= arr[i] + n;
+    arr2.push(newNum);
+    
+  }
+  return arr2;
+  
+} 
+
+// Uncomment these to check your work!
+console.log(addN([1, 2, 3], 3)); // expected log [4, 5, 6]
+console.log(addN([3, 4, 5], 2)); // expected log [5, 6, 7]
+
+
+function mergingElements(array1, array2){
+  // ADD CODE HERE
+  let sum = 0;
+  let arr3 = [];
+  if (array1.length > array2.length){
+    for (let i= 0 ; i<array1.length ; i++){
+      if (array2[i] == null ){
+        sum = array1[i] + 0
+
+      }else{
+        sum  = array1[i] + array2[i];
+      }
+      arr3.push(sum);
+    }
+  }else{
+    for (let i= 0 ; i<array2.length ; i++){
+      sum = array1[i] + array2[i];
+      arr3.push(sum);
+    }
+  }
+  return arr3
+};
+// Uncomment these to check your work!
+console.log(mergingElements([1, 2, 3, 4, 9, 10], [5, 6, 7, 8])); // expected log [6, 8, 10, 12]
+console.log(mergingElements([7, 3, 6, 0], [3, 9, 17, 81])); // expected log [10, 12, 23, 81]
+
+
+
+function mergingTripletsAndQuints(array1, array2) {
+ // ADD CODE HERE
+  let sum = 0;
+  let arr3 = [];
+  for (let i = 0 ; i<array1.length ; i++){
+    if  ((array1[i] % 3 === 0) || (array1[i] % 5 === 0)){
+    		sum = array1[i] + array2[i];
+      	arr3.push(sum);
+  	}else{
+      arr3.push(array1[i]);
+    }
+  }
+  return arr3;
+
+}
+
+// Uncomment these to check your work!
+console.log(mergingTripletsAndQuints([1, 2, 3, 4, 5, 15], [1, 3, 6, 7, 8, 9])); // expected log [1, 2, 9, 4, 13, 24]
+console.log(mergingTripletsAndQuints([1, 1, 3, 9, 5, 15], [1, 2, 3, 4, 5, 6])); // expected log [1, 1, 6, 13, 10, 21]
