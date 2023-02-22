@@ -13,11 +13,11 @@
 // A. Q + A
 /* 
     1. How do we assign a value to a variable?
-        A. With the assignment operator "=" 
+        A. With the assignment operator "=".  let name = "P";
     2. How do we change the value of a variable? 
-        A. selecting the value and change it to new value.
+        A. selecting the value and change it to new value.  name = "my name";
     3. How do we assign an existing variable to a new variable? 
-        A. Assign a new variable using the assignment operator - then using the assignment operator to assgin existing variable to new variable;
+        A. Assign a new variable using the assignment operator - then using the assignment operator to assgin existing variable to new variable; let newVariable = name;
     4. Remind me, what are declare, assign, and define? 
         A. Declare is create a new avariable using key word let or var or const - Assign a new value to a variable - Define a function with block of code designed to perform a specific task.
     5. What is pseudocoding and why should you do it? 

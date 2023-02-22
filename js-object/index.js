@@ -300,3 +300,5 @@ console.log(`%c --ex10---- `, `color:yellow`);
 
 const secondTree = myPlants[1].list[1]
 console.log(secondTree);
+
+

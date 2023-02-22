@@ -160,3 +160,64 @@ function addList(...number){
 }
 getAddList = addList(5,7,9);
 console.log(getAddList);
+
+
+
+// ! Add a key value pair to an object
+// ADD CODE HERE 
+const addWaldo = function(name){
+    name.Waldo = 'unknown'
+    
+    return name
+}
+// Uncomment these to check your work!
+const siliconValley = {'Richard': 'Hendricks', 'Erlich': 'Bachman', 'Bertram': 'Gilfoyle'}
+console.log(addWaldo(siliconValley)) // should log:{ Richard: 'Hendricks', Erlich: 'Bachman', Bertram: 'Gilfoyle', Waldo: 'unknown' }
+
+// ! get value from key of an object
+  // ADD CODE HERE
+  const findWaldo = function(obj){
+    let keys = Object.keys(obj);
+      for(let i= 0 ; i< keys.length ; i++){
+
+        // * get key and value 
+        console.log(`${keys[i]}: ${obj[keys[i]]}`);
+
+        if (keys[i] === "Waldo"){
+            return obj.Waldo;
+        }
+    }
+    return `Where's Waldo?`;
+}
+      
+// Uncomment these to check your work!
+const DC = {'Bruce': 'Wayne', 'Harley': 'Quinn'}
+const supernatural = {'Sam': 'Winchester', 'Dean': 'Winchester', 'Waldo': 'unknown'}
+console.log(findWaldo(DC)) // should log: 'Where's Waldo?'
+console.log(findWaldo(supernatural)) // should log: 'unknown'
+
+
+// ! count object value and returns an array filled with the numbers of elements
+function arrayBuilder(obj) {
+  // ADD CODE HERE
+  let arr3 = [];
+
+  
+ for(let keys in obj){
+    if(obj[keys] > 1){
+        let i = 0;
+      while(i < obj[keys]){ //run until i >= obj[keys]
+        arr3.push(keys);
+        i++;
+      }
+    }else{
+      arr3.push(keys);
+    }
+ 
+  }
+  return arr3
+}
+
+// Uncomment these to check your work!
+console.log(arrayBuilder({'cats': 2, 'dogs': 1})); // => ['cats', 'cats', 'dogs']
+console.log(arrayBuilder({})); // => []
