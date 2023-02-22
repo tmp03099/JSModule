@@ -3,6 +3,7 @@
 
 
 
+
         {
             "tag": "!",
             "color": "#FF2D00",
@@ -41,7 +42,7 @@
         },
         {
             "tag": "*",
-            "color": "#BFDB38",
+            "color": "#c8c8c8",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
