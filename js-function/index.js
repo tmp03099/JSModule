@@ -160,3 +160,38 @@ function addList(...number){
 }
 getAddList = addList(5,7,9);
 console.log(getAddList);
+
+
+
+// ! Add a key value pair to an object
+// ADD CODE HERE 
+const addWaldo = function(name){
+    name.Waldo = 'unknown'
+    
+    return name
+}
+// Uncomment these to check your work!
+const siliconValley = {'Richard': 'Hendricks', 'Erlich': 'Bachman', 'Bertram': 'Gilfoyle'}
+console.log(addWaldo(siliconValley)) // should log:{ Richard: 'Hendricks', Erlich: 'Bachman', Bertram: 'Gilfoyle', Waldo: 'unknown' }
+
+// ! get value from key of an object
+  // ADD CODE HERE
+  const findWaldo = function(obj){
+    let keys = Object.keys(obj);
+      for(let i= 0 ; i< keys.length ; i++){
+
+        // * get key and value 
+        console.log(`${keys[i]}: ${obj[keys[i]]}`);
+
+        if (keys[i] === "Waldo"){
+            return obj.Waldo;
+        }
+    }
+    return `Where's Waldo?`;
+}
+      
+// Uncomment these to check your work!
+const DC = {'Bruce': 'Wayne', 'Harley': 'Quinn'}
+const supernatural = {'Sam': 'Winchester', 'Dean': 'Winchester', 'Waldo': 'unknown'}
+console.log(findWaldo(DC)) // should log: 'Where's Waldo?'
+console.log(findWaldo(supernatural)) // should log: 'unknown'
