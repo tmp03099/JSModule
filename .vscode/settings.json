@@ -1,6 +1,8 @@
 {
     "better-comments.tags": [
 
+
+
         {
             "tag": "!",
             "color": "#FF2D00",
@@ -39,7 +41,7 @@
         },
         {
             "tag": "*",
-            "color": "#ff2951",
+            "color": "#BFDB38",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",

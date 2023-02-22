@@ -195,3 +195,29 @@ const DC = {'Bruce': 'Wayne', 'Harley': 'Quinn'}
 const supernatural = {'Sam': 'Winchester', 'Dean': 'Winchester', 'Waldo': 'unknown'}
 console.log(findWaldo(DC)) // should log: 'Where's Waldo?'
 console.log(findWaldo(supernatural)) // should log: 'unknown'
+
+
+// ! count object value and returns an array filled with the numbers of elements
+function arrayBuilder(obj) {
+  // ADD CODE HERE
+  let arr3 = [];
+
+  
+ for(let keys in obj){
+    if(obj[keys] > 1){
+        let i = 0;
+      while(i < obj[keys]){ //run until i >= obj[keys]
+        arr3.push(keys);
+        i++;
+      }
+    }else{
+      arr3.push(keys);
+    }
+ 
+  }
+  return arr3
+}
+
+// Uncomment these to check your work!
+console.log(arrayBuilder({'cats': 2, 'dogs': 1})); // => ['cats', 'cats', 'dogs']
+console.log(arrayBuilder({})); // => []

@@ -13,7 +13,7 @@ mainEl.classList.add('flex-ctr');
 
 // ? Task 2
 // Select and cache the <nav id="top-menu">element in a variable named topMenuEl
-const topMenuEl = document.getElementById('top-menu');
+const topMenuEl = document.querySelector('#top-menu');
 
 // Set the height topMenuElelement to be 100%.
 topMenuEl.style.height = '100%';
@@ -53,4 +53,5 @@ menuLinks.forEach((element) =>{
     
 });
 
-console.log(menuLinks)
+console.log(mainEl)
+console.log(topMenuEl)
