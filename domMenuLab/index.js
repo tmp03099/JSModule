@@ -29,10 +29,21 @@ topMenuEl.classList.add('flex-around');
 // Menu data structure
 var menuLinks = [
     {text: 'about', href: '/about'},
-    {text: 'catalog', href: '/catalog'},
-    {text: 'orders', href: '/orders'},
-    {text: 'account', href: '/account'},
-];
+    {text: 'catalog', href: '#', subLinks: [
+      {text: 'all', href: '/catalog/all'},
+      {text: 'top selling', href: '/catalog/top'},
+      {text: 'search', href: '/catalog/search'},
+    ]},
+    {text: 'orders', href: '#' , subLinks: [
+      {text: 'new', href: '/orders/new'},
+      {text: 'pending', href: '/orders/pending'},
+      {text: 'history', href: '/orders/history'},
+    ]},
+    {text: 'account', href: '#', subLinks: [
+      {text: 'profile', href: '/account/profile'},
+      {text: 'sign out', href: '/account/signout'},
+    ]},
+  ];
 
 
 menuLinks.forEach((element) =>{
@@ -55,3 +66,88 @@ menuLinks.forEach((element) =>{
 
 console.log(mainEl)
 console.log(topMenuEl)
+
+
+// ? Task 4.0
+// Select and cache the <nav id="sub-menu">
+const subMenuEl = document.querySelector('#sub-menu');
+
+// Set the height subMenu Elelement to be 100%
+subMenuEl.style.height = "100%";
+
+// Set the background color
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+
+//Add flex-around
+subMenuEl.classList.add('flex-around');
+
+// Set the position absolute
+subMenuEl.style.position = 'absolute';
+
+// Set top property value 0
+subMenuEl.style.top = '0';
+
+
+// ? Task 5.0
+const topMenuLinks = document.querySelectorAll('a');
+
+//Declare a global showingSubMenu
+let showingSubMenu = false;
+
+//Attach a delegated 'click' event listener to topMenuEl
+topMenuEl.addEventListener('click', function (event){
+
+    event.preventDefault();
+
+    //show all the event that occurs when clicked
+    console.log(event);
+
+    // return if the element clicked was not an <a>element.
+    if (event.target.tagName !== "A"){
+        return
+    }
+
+    
+    //Task 5.3
+    //Remove the active class from the clicked <a>element.
+    if(event.target.className === 'active'){
+        event.remove('active');
+    }
+
+    //set the showingSubMenu
+    showingSubMenu = false;
+
+    //Set css top property
+    subMenuEl.style.top = '0';
+
+
+    return;
+    
+    //Task 5.4
+    //remove a class name of active from each <a> element
+
+    topMenuLinks.forEach(item =>{
+        item.remove('active');
+    })
+
+    //add a class name of active to the <a>element that was clicked.
+    topMenuLinks.classList.add('active');
+
+    //Task 5.6
+    // Set showingSubMenu to true if the clicked <a> element's 
+    // "link" object within menuLinkshas a subLinks property 
+    
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
