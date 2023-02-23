@@ -94,6 +94,9 @@ const topMenuLinks = document.querySelectorAll('a');
 //Declare a global showingSubMenu
 let showingSubMenu = false;
 
+//Declare link object
+let linkObject;
+
 //Task 5.2
 //Attach a delegated 'click' event listener to topMenuEl
 topMenuEl.addEventListener('click', function(event){
@@ -141,15 +144,90 @@ topMenuEl.addEventListener('click', function(event){
 
     //Task 5.6
     // Set showingSubMenu to true if the clicked <a> element's 
-    // "link" object within menuLinkshas a subLinks property 
+    // "link" object within menuLinks has a subLinks property 
+    menuLinks.forEach(link =>{
+      if(link.text === event.target.innerHTML){
+        //saving the link object
+        linkObject = link;
+
+        if (link.subLinks){
+          showingSubMenu = true;
+        }else{
+          showingSubMenu = false;
+        }
+      }
+    });
+    console.log("Showing Submenu: " , showingSubMenu)
+    console.log(linkObject)
+
+    //Task 5.7
+    //Call a buildSubMenu function passing to it the subLinks array for the clicked <a> element.
+    if (showingSubMenu){
+      buildSubMenu(linkObject.subLinks)
+      subMenuEl.style.top = '100%';
+    }else{
+      subMenuEl.style.top = '0';
+    }
+
+    // If the ABOUT link is clicked, an <h1>about</h1>should be displaye
+    if(event.target.textContent === "about"){
+      const h1Top = document.querySelector('h1');
+      h1Top.textContent = "about";
+    }
+
     
-
-
 })
 
+//Task 5.8
+function buildSubMenu(arr){
+  subMenuEl.textContent = "";
+  arr.forEach(link =>{
+    //create an <a> ele
+    const aElement = document.createElement('a');
+
+    //add href and set href value
+    aElement.setAttribute('href', link.href)
+
+    //set new content with text value
+    aElement.textContent = link.text
+
+    //append the new element to subMenuEl
+    subMenuEl.appendChild(aElement);
+
+  })
+  
+}
+
+console.log(subMenuEl)
 
 
+//Task 6
+// Attach a delegated 'click' event listener to subMenuEl.
+subMenuEl.addEventListener('click', function(e){
+  e.preventDefault()
+  console.log(e)
 
+  if(e.target.tagName !== "A"){
+    return
+  }
+
+  showingSubMenu = false;
+  subMenuEl.style.top = '0';
+
+  
+  // Remove the class name of active from each <a> element in topMenuLinks
+  topMenuLinks.forEach(link =>{
+    link.classList.remove('active');
+  })
+  console.log(topMenuLinks)
+
+  //updated the contents of mainEl to the contents of the <a>element, within an <h1>, clicked within subMenuEl.
+  const h1 = document.querySelector('h1')
+  h1.textContent = e.target.textContent
+  console.log(h1)
+
+ 
+})
 
 
 
