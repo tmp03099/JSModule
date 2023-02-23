@@ -94,44 +94,50 @@ const topMenuLinks = document.querySelectorAll('a');
 //Declare a global showingSubMenu
 let showingSubMenu = false;
 
+//Task 5.2
 //Attach a delegated 'click' event listener to topMenuEl
-topMenuEl.addEventListener('click', function (event){
+topMenuEl.addEventListener('click', function(event){
 
+    //call preventDefault() method to preven default action for ele
     event.preventDefault();
 
     //show all the event that occurs when clicked
     console.log(event);
 
-    // return if the element clicked was not an <a>element.
+    // ! event.target is the clicked element and use when clicked element
+    // * immediately return if the element clicked was not an <a> element 
+    // use tagName to get <a> 
     if (event.target.tagName !== "A"){
         return
     }
 
-    
+
+    //? How to know it is <a> tag when it run to Task 5.3 (answer //*)
     //Task 5.3
-    //Remove the active class from the clicked <a>element.
-    if(event.target.className === 'active'){
-        event.remove('active');
+    //Remove the active class from the clicked <a> element 
+    // ! event.taget.tagName: is clicked <a> element (check tagName to know which element)
+    if(event.target.classList.contains('active')){
+        event.target.classList.remove('active');
+
+        //set the showingSubMenu
+        showingSubMenu = false;
+
+        //Set css top property
+        subMenuEl.style.top = '0';
+        return;
     }
 
-    //set the showingSubMenu
-    showingSubMenu = false;
-
-    //Set css top property
-    subMenuEl.style.top = '0';
-
-
-    return;
     
     //Task 5.4
     //remove a class name of active from each <a> element
-
     topMenuLinks.forEach(item =>{
-        item.remove('active');
+        item.classList.remove('active');
+        console.log(item.classList);
     })
 
-    //add a class name of active to the <a>element that was clicked.
-    topMenuLinks.classList.add('active');
+    //add a class name of active to the <a> element that was clicked.
+    event.target.classList.add('active');
+    console.log(event.target)
 
     //Task 5.6
     // Set showingSubMenu to true if the clicked <a> element's 
