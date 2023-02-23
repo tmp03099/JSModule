@@ -169,7 +169,8 @@ topMenuEl.addEventListener('click', function(event){
       subMenuEl.style.top = '0';
     }
 
-    // If the ABOUT link is clicked, an <h1>about</h1>should be displaye
+    //Task 6.4
+    // If the ABOUT link is clicked, an <h1>about</h1>should be displayed
     if(event.target.textContent === "about"){
       const h1Top = document.querySelector('h1');
       h1Top.textContent = "about";
@@ -225,7 +226,6 @@ subMenuEl.addEventListener('click', function(e){
   const h1 = document.querySelector('h1')
   h1.textContent = e.target.textContent
   console.log(h1)
-
  
 })
 
