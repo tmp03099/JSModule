@@ -78,3 +78,36 @@ console.log(att);
 console.log(getTitle.hasAttribute('class'));
 
 
+// TODO: add a list item for each to the unordered list
+const fruitList = ["apple","banana", "tomato"];
+
+const ul = document.createElement('ul');
+  
+fruitList.forEach(item =>{
+    //create li element
+    const li = document.createElement('li');
+    //add text content from fruitList array
+    li.textContent = item;
+    //append child li inside ul parent
+    ul.appendChild(li);
+})
+
+//append ul to body browser
+body.appendChild(ul);
+
+// TODO: Add the CroCoder logo (image element) as a child element to the existing div element.
+const imageSrc = "https://crocoder.dev/icon.png";
+const img = document.createElement('img')
+const div = document.querySelector('div');
+
+//addd imageSrc to img element source code
+img.src = imageSrc
+
+img.style.width = "100px";
+div.appendChild(img);
+
+// TODO: Change the text in the first and the last list item element in every unordered list element on this page. Change it to 'first' and 'last'.
+//use li (ul: #chat) already selector by chatLis name
+
+
+
